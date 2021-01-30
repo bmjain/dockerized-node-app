@@ -1,0 +1,16 @@
+<form class="example-form">
+    <mat-form-field class="example-full-width">
+      <mat-label>Name</mat-label>
+      <input matInput
+             placeholder="Start typing for suggestions.."
+             aria-label="Name"
+             [matAutocomplete]="auto"
+             [formControl]="autoCompleteControl">
+      <mat-autocomplete #auto="matAutocomplete">
+        <mat-option *ngFor="let option of filteredOptions | async" [value]="option.first_name">
+          <span>{{option.first_name}} {{option.last_name}} </span> |
+          <small>{{option.email}}</small>
+        </mat-option>
+      </mat-autocomplete>
+    </mat-form-field>
+    
