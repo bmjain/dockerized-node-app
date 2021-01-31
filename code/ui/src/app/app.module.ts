@@ -6,7 +6,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { AutocompleteComponent } from './components/autocomplete/autocomplete.component';
-import { ErrorComponent } from './components/error/error.component';
 import {MatAutocompleteModule} from '@angular/material/autocomplete'
 import {MatInputModule} from '@angular/material/input'
 import {MatFormFieldModule} from '@angular/material/form-field'
@@ -14,8 +13,7 @@ import {MatFormFieldModule} from '@angular/material/form-field'
 @NgModule({
   declarations: [
     AppComponent,
-    AutocompleteComponent,
-    ErrorComponent
+    AutocompleteComponent
   ],
   exports: [
     MatAutocompleteModule,
